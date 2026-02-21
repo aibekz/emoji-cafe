@@ -113,6 +113,8 @@ input {
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
   outline: none;
+  min-width: 0;
+  width: 100%;
 }
 
 input:focus {
@@ -152,4 +154,46 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  button[type="submit"] {
+    grid-column: span 1;
+  }
+
+  label {
+    font-size: 4vw;
+  }
+
+  input {
+    font-size: 4vw;
+    padding: 2vw;
+  }
+
+  button, a.button {
+    font-size: 4vw;
+    padding: 2.5vw;
+  }
+
+  button.btn-sm {
+    font-size: 3.5vw;
+  }
+
+  button.btn-xs {
+    font-size: 3vw;
+  }
+
+  .form-container {
+    margin: 0 2vw;
+    padding: 4vw;
+  }
+
+  .section-heading {
+    font-size: 4vw;
+  }
 }
