@@ -1,38 +1,75 @@
 # Emoji Cafe
 
-Emoji Cafe is a small MERN-stack sample app (MongoDB, Express, React, Node) that demonstrates a menu, shopping cart, and order history for users.
+Emoji Cafe is a full-stack restaurant ordering app where users can browse a menu, add items to a cart, place orders, and view order history — all with emoji-themed food items.
 
-Quick start
+![Emoji Cafe Screenshot](screenshot.png)
 
-- Install dependencies:
+## Features
+
+- User authentication (sign up / log in / log out)
+- Browse menu items by category
+- Add items to cart with quantity controls
+- Place orders and checkout
+- View previous order history
+
+## Tech Stack
+
+- **Frontend:** React, CSS
+- **Backend:** Node.js, Express
+- **Database:** MongoDB, Mongoose
+- **Auth:** JSON Web Tokens (JWT), bcrypt
+
+## Getting Started
+
+### 1. Clone the repo
 
 ```bash
+git clone https://github.com/aibekz/emoji-cafe.git
+cd emoji-cafe
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+# or
 npm install
 ```
 
-- Run the client in development (starts React dev server):
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory:
+
+```
+DATABASE_URL=mongodb://localhost:27017/emoji-cafe
+SECRET=your_jwt_secret
+```
+
+### 4. Seed the database
 
 ```bash
+node seed.js
+```
+
+### 5. Run the app
+
+Start both the React dev server and the API server:
+
+```bash
+# Terminal 1 — React client
 npm start
+
+# Terminal 2 — API server
+npm run dev
 ```
 
-- Run the API server (set env vars `DATABASE_URL` and `SECRET` first). Example using macOS zsh:
+The client runs on `http://localhost:3000` and proxies API requests to port `3001`.
 
-```bash
-export DATABASE_URL="mongodb://localhost:27017/emoji-cafe"
-export SECRET="your_jwt_secret"
-node server.js
-```
-
-Build for production
+## Build for Production
 
 ```bash
 npm run build
-# serve the build via the API server which already serves the /build directory
 node server.js
 ```
 
-Notes
-
-- The client proxies API requests to port 3001 during development (see `package.json`).
-- Keep `SECRET` private — do not commit it to source control.
+The Express server serves the built React app from the `/build` directory.
