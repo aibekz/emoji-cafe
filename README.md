@@ -1,6 +1,6 @@
-# Moji Cafe
+# Emoji Cafe
 
-Moji Cafe is a small MERN-stack sample app (MongoDB, Express, React, Node) that demonstrates a menu, shopping cart, and order history for users.
+Emoji Cafe is a small MERN-stack sample app (MongoDB, Express, React, Node) that demonstrates a menu, shopping cart, and order history for users.
 
 Quick start
 
@@ -19,7 +19,7 @@ npm start
 - Run the API server (set env vars `DATABASE_URL` and `SECRET` first). Example using macOS zsh:
 
 ```bash
-export DATABASE_URL="mongodb://localhost:27017/moji-cafe"
+export DATABASE_URL="mongodb://localhost:27017/emoji-cafe"
 export SECRET="your_jwt_secret"
 node server.js
 ```
