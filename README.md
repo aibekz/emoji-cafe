@@ -2,6 +2,8 @@
 
 Emoji Cafe is a full-stack restaurant ordering app where users can browse a menu, add items to a cart, place orders, and view order history — all with emoji-themed food items.
 
+**[Live Demo](https://emoji-cafe-c753a6e9df7a.herokuapp.com/)**
+
 ![Emoji Cafe Screenshot](screenshot.png)
 
 ## Features
